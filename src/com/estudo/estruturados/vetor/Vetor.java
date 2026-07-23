@@ -48,19 +48,21 @@ public class Vetor {
 
     @Override
     public String toString() {
-        String s = "[ ";
+
+        StringBuilder s = new StringBuilder();
+        s.append("[ ");
 
         for(int i = 0; i<this.tamanho-1; i++){
-            s = s + this.elementos[i];
-            s = s + ", ";
+            s.append(this.elementos[i]);
+            s.append(", ");
         }
 
         if(this.tamanho>0){
-           s = s + this.elementos[tamanho-1];
+           s.append(this.elementos[tamanho-1]);
         }
-        s = s + " ]";
+        s.append(" ]");
 
-        return s;
+        return s.toString();
     }
 
 
