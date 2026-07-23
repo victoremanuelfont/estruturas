@@ -11,6 +11,6 @@ public class aula06 {
         vetor.adiciona("Elemento02");
         vetor.adiciona("Elemento03");
 
-        System.out.println(vetor.busca("Elemento03"));
+        System.out.println(vetor.busca("lemento03"));
     }
 }
