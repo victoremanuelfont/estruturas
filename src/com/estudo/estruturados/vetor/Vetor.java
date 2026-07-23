@@ -1,5 +1,7 @@
 package com.estudo.estruturados.vetor;
 
+import java.util.Arrays;
+
 public class Vetor {
 
     private String[] elementos;
@@ -40,8 +42,26 @@ public class Vetor {
             return false;
     }
 
+    public int tamanho(){
+        return tamanho;
+    }
 
+    @Override
+    public String toString() {
+        String s = "[ ";
 
+        for(int i = 0; i<this.tamanho-1; i++){
+            s = s + this.elementos[i];
+            s = s + ", ";
+        }
+
+        if(this.tamanho>0){
+           s = s + this.elementos[tamanho-1];
+        }
+        s = s + " ]";
+
+        return s;
+    }
 
 
 
