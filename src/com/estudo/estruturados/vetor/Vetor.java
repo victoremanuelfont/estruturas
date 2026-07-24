@@ -46,7 +46,7 @@ public class Vetor {
         return tamanho;
     }
 
-    @Override
+   // @Override
     public String toString() {
 
         StringBuilder s = new StringBuilder();
@@ -81,6 +81,33 @@ public class Vetor {
         }
         return -1;
     }
+
+    public boolean adicionar(int posicao, String elemento){
+
+        if (!(posicao>=0 && posicao<tamanho)){
+            throw new IllegalArgumentException("Posição Inválida");
+        }
+        for(int i=tamanho-1; i>=posicao; i--){
+            elementos[i+1] = elementos[i];
+        }
+        this.elementos[posicao] = elemento;
+        this.tamanho++;
+        return true;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
